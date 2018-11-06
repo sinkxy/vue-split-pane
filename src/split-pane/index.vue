@@ -98,11 +98,8 @@
           const targetOffset = this.split === 'vertical' ? e.currentTarget.offsetWidth : e.currentTarget.offsetHeight
           const percent = Math.floor(((currentPage - offset) / targetOffset) * 10000) / 100
 
-          if (percent > this.minPercent) { //大于最小值即可
+          if (percent > this.minPercent && percent < this.maxPercent) { //大于最小值，小于最大值即可
             this.percent = percent
-          }
-          if (percent < this.maxPercent) {  //小于最大值即可
-              this.percent = percent
           }
 
           this.$emit('resize')
