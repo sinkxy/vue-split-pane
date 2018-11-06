@@ -26,6 +26,10 @@
         type: Number,
         default: 10
       },
+	  maxPercent: {
+	    type: Number,
+	    default: 90
+      },
       defaultPercent: {
         type: Number,
         default: 50
@@ -96,6 +100,9 @@
 
           if (percent > this.minPercent && percent < 100 - this.minPercent) {
             this.percent = percent
+          }
+          if (percent < this.maxPercent && percent > 100 - this.maxPercent) {
+              this.percent = percent
           }
 
           this.$emit('resize')
