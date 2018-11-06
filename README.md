@@ -53,4 +53,5 @@ Vue.component('split-pane', splitPane);
 | split       | the split type |String [horizontal,vertical] |must choose one type |
 | min-percent         | paneL max-min-percent  |Number | 10 |
 | max-percent         | paneL max-percent  |Number | 10 |
+| set-percent         | paneL max-percent  |Number | 10 |
 

@@ -26,6 +26,10 @@
         type: Number,
         default: 10
       },
+      setPercent: {
+          type: Number,
+          default: 10
+      },
 	  maxPercent: {
 	    type: Number,
 	    default: 90
@@ -60,10 +64,17 @@
         resizeType: this.split === 'vertical' ? 'left' : 'top'
       }
     },
+    watch: {
+        setPercent: function (val) {
+            if (val>=0 &&val<=100){
+                this.percent=val;
+            }
+        },
+    },
     methods: {
       onClick() {
         if (!this.hasMoved) {
-          this.percent = 50
+          //this.percent = 50
           this.$emit('resize')
         }
       },
