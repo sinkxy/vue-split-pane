@@ -1,6 +1,6 @@
 # Vue Split Pane
 
-Split-Pane component built with vue2.0, can be split vertically or horizontally.
+Split-Pane component built with vue2.0, can be split vertically or horizontally,and change the size dynamically.
 
 
 ### How to use?
