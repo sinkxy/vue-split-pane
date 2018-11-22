@@ -2,7 +2,6 @@
 
 Split-Pane component built with vue2.0, can be split vertically or horizontally.
 
-## [Try the demo](http://panjiachen.github.io/split-pane/demo/index.html)
 
 ### How to use?
 ```bash
@@ -18,7 +17,7 @@ Vue.component('split-pane', splitPane);
 ### Example
 
 ```html
-   <split-pane v-on:resize="resize" :min-percent='20' :default-percent='30' split="vertical">
+   <split-pane @resize="resize" :set-percent="value" :min-percent='20' :default-percent='30' split="vertical">
       <template slot="paneL">
         A
       </template>
@@ -30,7 +29,7 @@ Vue.component('split-pane', splitPane);
 
 ```html
   //nested
-   <split-pane v-on:resize="resize" :min-percent='20' :default-percent='30' split="vertical">
+   <split-pane @resize="resize" :set-percent="value" :min-percent='20' :default-percent='30' split="vertical">
       <template slot="paneL">
         A
       </template>
@@ -51,7 +50,7 @@ Vue.component('split-pane', splitPane);
 |    Property    |    Description   |   type   |	default	|
 | -----------------  | ---------------- | :--------: | :----------: |
 | split       | the split type |String [horizontal,vertical] |must choose one type |
-| min-percent         | paneL max-min-percent  |Number | 10 |
-| max-percent         | paneL max-percent  |Number | 10 |
-| set-percent         | paneL max-percent  |Number | 10 |
+| min-percent         | paneL min-percent           |Number | 10 |
+| max-percent         | paneL max-percent           |Number | 90 |
+| set-percent         | dynamic change paneL value  |Number | 10 |
 

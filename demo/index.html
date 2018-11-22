@@ -28,9 +28,9 @@
 
     <template>
 
-      <split-pane v-on:resize="resize" :min-percent='20' split="vertical">
-        <template slot="paneL">
-          A
+      <split-pane v-on:resize="resize" :min-percent='20'  :set-percent="thePercent" :max-percent="80" split="vertical">
+        <template slot="paneL">          
+			<el-input v-model="thePercent"></el-input>
         </template>
 
         <template slot="paneR">
